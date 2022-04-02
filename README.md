@@ -2,8 +2,6 @@ Most of the time it's frustating that we need to download a Kernel source from [
 
 Well, this script solves it! With this script, you can download the source directly from your Terminal! No need to download-reupload anymore. Just run, choose the source, and download 😎
 
-> **Thanks to @fourkbomb and @Linux4 for code references!**
-
 # Usage
 
 First, we need to install Python 3 and PiP in order to run the script:
