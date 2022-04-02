@@ -6,10 +6,10 @@ Well, this script solves it! With this script, you can download the source direc
 
 # Usage
 
-First, we need to install Python 3 in order to run the script:
+First, we need to install Python 3 and PiP in order to run the script:
 
 ```bash
-$ sudo apt install python3 -y
+$ sudo apt install python3 python3-pip -y
 ```
 
 Then, clone and run it:
@@ -19,6 +19,17 @@ $ git clone https://github.com/hendramanudinata03/osrc_download.git
 Cloning into 'osrc_download'...
 ...
 $ cd osrc_download/
+```
+
+Before running the script for the first time, please install required dependencies:
+
+```bash
+$ pip install -r requirements.txt
+```
+
+Now you can run the script:
+
+```bash
 $ python osrc_download.py
 ```
 
