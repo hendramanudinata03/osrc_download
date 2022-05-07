@@ -51,8 +51,7 @@ for row in rowSearchTable:
     print("[%d] Model: %s | Baseband Version: %s" % (dataIndex, sourceModel, sourceBaseband))
 
     dataList[dataIndex] = {
-        "uploadId": sourceUploadId,
-        "downloadPurpose": "AOP"
+        "uploadId": sourceUploadId
     }
 
     dataIndex += 1
