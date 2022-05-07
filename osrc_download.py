@@ -86,17 +86,9 @@ dataHeaders = {
 requestDown = session.post(downSrcURL, data=dataParams, headers=dataHeaders, stream=True)
 
 sourceFileName = requestDown.headers["Content-Disposition"].split("=")[1][1:].replace('"', "").replace(";", "")
-splittedFileName = sourceFileName.split("_")
-
-print("")
-print("Model: " + splittedFileName[0])
-print("Region: " + splittedFileName[1])
-print("Android version: " + splittedFileName[2])
-print("File name: " + sourceFileName)
-print("")
 
 try:
-    print("Downloading, please do not terminate the script!")
+    print("\nDownloading %s, please do not terminate the script!" % sourceFileName)
     with open(sourceFileName, "wb") as file:
         for chunk in requestDown.iter_content(chunk_size=512 * 1024):
             file.write(chunk)
