@@ -56,10 +56,7 @@ for row in rowSearchTable:
 
     dataIndex += 1
 
-# Correct the index
-dataIndex -= 1
-
-dataChoiceNum = int(input("Select firmware [1 - %d]: " % dataIndex))
+dataChoiceNum = int(input("Select firmware [1 - %d]: " % (dataIndex - 1)))
 
 try:
     dataChoice = dataList[dataChoiceNum]
