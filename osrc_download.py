@@ -33,7 +33,7 @@ searchQuery = input("Enter the search query: ")
 session = requests.Session()
 
 requestSearch = session.get(searchURL % quote(searchQuery))
-parseSearchContent = BeautifulSoup(requestSearch.content, "lxml")
+parseSearchContent = BeautifulSoup(requestSearch.content, "html.parser")
 
 searchTable = parseSearchContent.find_all("table", class_="tbl-downList")
 rowSearchTable = searchTable[0].find_all("tr", class_="")
@@ -65,7 +65,7 @@ except KeyError:
     exit(1)
 
 requestModal = session.get(modalURL % dataChoice["uploadId"])
-parseModalRequest = BeautifulSoup(requestModal.content, "lxml")
+parseModalRequest = BeautifulSoup(requestModal.content, "html.parser")
 
 dataChoice["attachIds"] = parseModalRequest.find_all("input", type="checkbox")[1]["id"]
 dataChoice["_csrf"] = parseModalRequest.find_all(attrs={"name": "_csrf"})[0]["value"]
