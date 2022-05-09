@@ -98,5 +98,6 @@ except KeyboardInterrupt:
     print("Interrupted!")
     exit(130)
 except:
+    os.remove(sourceFileName)
     print("Error!")
     exit(1)
