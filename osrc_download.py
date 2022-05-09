@@ -18,6 +18,7 @@
 # limitations under the License.
 #
 
+import sys
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -81,18 +82,28 @@ dataHeaders = {
 requestDown = session.post(downSrcURL, data=dataParams, headers=dataHeaders, stream=True)
 
 sourceFileName = requestDown.headers["Content-Disposition"].split("=")[1][1:].replace('"', "").replace(";", "")
+sourceFileSize = int(requestDown.headers["Content-Length"])
+sourceFileChunk = requestDown.iter_content(chunk_size=512 * 1024)
 
 try:
     print("\nDownloading %s, please do not terminate the script!" % sourceFileName)
+
     with open(sourceFileName, "wb") as file:
-        for chunk in requestDown.iter_content(chunk_size=512 * 1024):
+        downloadedChunk = 0
+
+        for chunk in sourceFileChunk:
             file.write(chunk)
-    print("Done!")
+
+            downloadedChunk += len(chunk)
+            done = int(50 * downloadedChunk / sourceFileSize)
+            sys.stdout.write("\r[%s%s]" % ("=" * done, " " * (50 - done)) )
+            sys.stdout.flush()
+    print("\nDone!")
 except KeyboardInterrupt:
     os.remove(sourceFileName)
-    print("Interrupted!")
+    print("\nInterrupted!")
     exit(130)
 except:
     os.remove(sourceFileName)
-    print("Error!")
+    print("\nError!")
     exit(1)
