@@ -48,7 +48,7 @@ for row in rowSearchTable:
     sourceBaseband = dataSearchTable[2].text.strip()
     sourceUploadId = dataSearchTable[5].find("a")["href"].split("'")[1]
 
-    print("[%d] Model: %s | Baseband Version: %s" % (dataIndex, sourceModel, sourceBaseband))
+    print("[%d] Model: %s | Version: %s" % (dataIndex, sourceModel, sourceBaseband))
 
     dataList[dataIndex] = {
         "uploadId": sourceUploadId

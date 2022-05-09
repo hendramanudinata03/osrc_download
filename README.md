@@ -1,10 +1,10 @@
-Most of the time it's frustating that we need to download a Kernel source from [Samsung OSRC](https://opensource.samsung.com), and if we have a server that we build the Kernel on, we need to upload it into that server first. What a time-wasting, right?
+Most of the time it's frustating that we need to download a releases from [Samsung OSRC](https://opensource.samsung.com), especially Kernel sources. And if we have a server that we build the Kernel on, we need to upload it into that server first. What a time-wasting, right?
 
-Well, this script solves it! With this script, you can download the source directly from your Terminal! No need to download-reupload anymore. Just run, choose the source, and download 😎
+Well, this script solves it! With this script, you can download the release directly from your Terminal! No need to download-reupload anymore. Just run, choose the release, and download 😎
 
 # Usage
 
-First, we need to install Python 3 and PiP in order to run the script:
+First, we need to install Python 3 and PIP in order to run the script:
 
 ```bash
 $ sudo apt install python3 python3-pip -y
