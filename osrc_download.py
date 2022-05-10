@@ -72,7 +72,6 @@ dataChoice["_csrf"] = parseModalRequest.find_all(attrs={"name": "_csrf"})[0]["va
 dataChoice["token"] = quote(parseModalRequest.find_all(id="token")[0]["value"].encode("utf-8"))
 
 dataParams = "_csrf=" + dataChoice["_csrf"] + "&uploadId=" + dataChoice["uploadId"] + "&attachIds=" + dataChoice["attachIds"] + "&downloadPurpose=AOP&token=" + dataChoice["token"]
-dataInBytes = [ord(s) for s in dataParams]
 
 dataHeaders = {
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
