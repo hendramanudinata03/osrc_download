@@ -75,11 +75,7 @@ dataParams = "_csrf=" + dataChoice["_csrf"] + "&uploadId=" + dataChoice["uploadI
 dataInBytes = [ord(s) for s in dataParams]
 
 dataHeaders = {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    "Content-Length": "" + str(len(dataInBytes)),
-    "Origin": baseURL,
-    "Referer": searchURL % quote(searchQuery),
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.55",
 }
 
