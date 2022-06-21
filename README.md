@@ -39,6 +39,11 @@ $ python osrc_download.py
 
 It will ask you to choose device model and the specific source you want to download. Soon after that, the download will start. Enjoy some snacks or a coffee, because it will take some time.
 
+# TODOs
+
+- [ ] Allow uninteractive usage, useful for automation processes (e.g. CI)
+- [ ] Require user to choose download directory and/or target file name
+
 # Credits
 
 [@fourkbomb](https://github.com/fourkbomb) for his [Gist](https://gist.github.com/fourkbomb/9f0aeadb5b300a4fdd23559c368d75dd) and [@Linux4](https://github.com/Linux4) for his [SamsungFirmwareBot component](https://github.com/Linux4/SamsungFirmwareBot/blob/master/src/main/java/de/linux4/samsungfwbot/SamsungKernelInfo.java). Really, thank you for the references!
