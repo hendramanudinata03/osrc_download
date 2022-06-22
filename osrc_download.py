@@ -58,10 +58,10 @@ for index, row in enumerate(rowSearchTable):
     })
 
 # Choose source
-requestDataNum = int(input(f"Select firmware [1 - {index - 1}]: "))
-try:
+requestDataNum = int(input(f"Select firmware [1 - {index + 1}]: "))
+if len(dataList) >= requestDataNum and requestDataNum >= 1:
     requestData = dataList[requestDataNum - 1]
-except KeyError:
+else:
     print("Invalid choice!")
     exit(1)
 
