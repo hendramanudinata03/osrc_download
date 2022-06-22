@@ -47,10 +47,10 @@ for index, row in enumerate(rowSearchTable):
     dataSearchTable = row.find_all("td")
 
     sourceModel = dataSearchTable[1].text.strip()
-    sourceBaseband = dataSearchTable[2].text.strip()
+    sourceVersion = dataSearchTable[2].text.strip()
     sourceUploadId = dataSearchTable[5].find("a")["href"].split("'")[1]
 
-    print(f"[{index + 1}] Model: {sourceModel} | Version: {sourceBaseband}")
+    print(f"[{index + 1}] Model: {sourceModel} | Version: {sourceVersion}")
 
     dataList.append({
         "uploadId": sourceUploadId,
