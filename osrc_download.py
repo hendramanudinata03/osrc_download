@@ -85,7 +85,7 @@ sourceSize = int(requestDown.headers["Content-Length"])
 
 try:
     print(f"\nDownloading {sourceFileName} ({sourceVersion}), please do not terminate the script!")
-    progressBar = tqdm(total=sourceSize, unit="MB", unit_scale=True)
+    progressBar = tqdm(total=sourceSize, unit="B", unit_scale=True)
     with open(sourceFileName, "wb") as file:
         for chunk in requestDown.iter_content(chunk_size=1024 * 1024):
             file.write(chunk)
