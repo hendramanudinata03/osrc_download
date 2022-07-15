@@ -28,13 +28,13 @@ $ cd osrc_download/
 Before running the script for the first time, please install required dependencies:
 
 ```
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 Now you can run the script:
 
 ```
-$ python osrc_download.py
+$ python3 osrc_download.py
 ```
 
 It will ask you to choose device model and the specific source you want to download. Soon after that, the download will start. Enjoy some snacks or a coffee, because it will take some time.
